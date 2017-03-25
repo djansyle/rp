@@ -43,6 +43,7 @@ export class RPCache {
     this.logger = debug('rp:cache');
     if (Pool) {
       this.logger('Pool already been initialized, Ignoring new redis config.');
+      this.pool = Pool;
       return;
     }
 
